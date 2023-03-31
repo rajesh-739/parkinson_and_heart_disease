@@ -42,52 +42,52 @@ if selected == "Parkinsons Disease Prediction" :
     with col4:
         Jitter_percent = st.number_input('MDVP:Jitter(%)')
         
-    with col5:
+    with col1:
         Jitter_Abs = st.number_input('MDVP:Jitter(Abs)')
         
-    with col1:
+    with col2:
         RAP = st.number_input('MDVP:RAP')
         
-    with col2:
+    with col3:
         PPQ = st.number_input('MDVP:PPQ')
         
-    with col3:
+    with col4:
         DDP = st.number_input('Jitter:DDP')
         
-    with col4:
+    with col1:
         Shimmer = st.number_input('MDVP:Shimmer')
         
-    with col5:
+    with col2:
         Shimmer_dB = st.number_input('MDVP:Shimmer(dB)')
         
-    with col1:
+    with col3:
         APQ3 = st.number_input('Shimmer:APQ3')
         
-    with col2:
+    with col4:
         APQ5 = st.number_input('Shimmer:APQ5')
         
-    with col3:
+    with col1:
         APQ = st.number_input('MDVP:APQ')
         
-    with col4:
+    with col2:
         DDA = st.number_input('Shimmer:DDA')
         
-    with col5:
+    with col3:
         NHR = st.number_input('NHR')
         
-    with col1:
+    with col4:
         HNR = st.number_input('HNR')
         
-    with col2:
+    with col1:
         RPDE = st.number_input('RPDE')
         
-    with col3:
+    with col2:
         DFA = st.number_input('DFA')
         
-    with col4:
+    with col3:
         spread1 = st.number_input('spread1')
         
-    with col5:
+    with col4:
         spread2 = st.number_input('spread2')
         
     with col1:
