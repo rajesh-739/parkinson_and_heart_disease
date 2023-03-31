@@ -28,7 +28,7 @@ if selected == "Parkinsons Disease Prediction" :
     #st.header("Welcome to The Parkinsons Disease Prediction System Page")
     st.markdown("<h1 style='color:#FF4B4B'>Welcome to Parkinsons Disease Prediction System</h1>",unsafe_allow_html=True)
     st.code('Here You can Check You Parkinsons Disease Status and Heart Disease as Well',language="C")
-    col1, col2, col3, col4, col5 = st.columns(5)  
+    col1, col2, col3, col4 = st.columns(4)  
     
     with col1:
         fo = st.number_input('MDVP:Fo(Hz)')
@@ -100,17 +100,20 @@ if selected == "Parkinsons Disease Prediction" :
     
     # code for Prediction
     parkinsons_diagnosis = ''
-    
+    result = 0
     # creating a button for Prediction    
     if st.button("Parkinson's Test Result"):
         parkinsons_prediction = parkinson_model.predict([[fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ,DDP,Shimmer,Shimmer_dB,APQ3,APQ5,APQ,DDA,NHR,HNR,RPDE,DFA,spread1,spread2,D2,PPE]])                          
         
         if (parkinsons_prediction[0] == 1):
           parkinsons_diagnosis = "The person has Parkinson's disease"
+          result = 1
         else:
           parkinsons_diagnosis = "The person does not have Parkinson's disease"
         
     st.success(parkinsons_diagnosis)
+    if (result == 1):
+        st.info("Check Your Heart Disease Status at the Side bar menu by Clicking on Heart Disease")
 
 
     
