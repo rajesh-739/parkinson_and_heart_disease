@@ -31,70 +31,70 @@ if selected == "Parkinsons Disease Prediction" :
     col1, col2, col3 = st.columns(3)  
     
     with col1:
-        fo = st.number_input('MDVP:Fo(Hz)')
+        fo = st.number_input(label='MDVP:Fo(Hz)')
         
     with col2:
-        fhi = st.number_input('MDVP:Fhi(Hz)')
+        fhi = st.number_input(label='MDVP:Fhi(Hz)')
         
     with col3:
-        flo = st.number_input('MDVP:Flo(Hz)')
+        flo = st.number_input(label='MDVP:Flo(Hz)')
         
     with col1:
-        Jitter_percent = st.number_input('MDVP:Jitter(%)')
+        Jitter_percent = st.number_input(label='MDVP:Jitter(%)')
         
     with col2:
-        Jitter_Abs = st.number_input('MDVP:Jitter(Abs)')
+        Jitter_Abs = st.number_input(label='MDVP:Jitter(Abs)')
         
     with col3:
-        RAP = st.number_input('MDVP:RAP')
+        RAP = st.number_input(label='MDVP:RAP')
         
     with col1:
-        PPQ = st.number_input('MDVP:PPQ')
+        PPQ = st.number_input(label='MDVP:PPQ')
         
     with col2:
-        DDP = st.number_input('Jitter:DDP')
+        DDP = st.number_input(label='Jitter:DDP')
         
     with col3:
-        Shimmer = st.number_input('MDVP:Shimmer')
+        Shimmer = st.number_input(label='MDVP:Shimmer')
         
     with col1:
-        Shimmer_dB = st.number_input('MDVP:Shimmer(dB)')
+        Shimmer_dB = st.number_input(label='MDVP:Shimmer(dB)')
         
     with col2:
-        APQ3 = st.number_input('Shimmer:APQ3')
+        APQ3 = st.number_input(label='Shimmer:APQ3')
         
     with col3:
-        APQ5 = st.number_input('Shimmer:APQ5')
+        APQ5 = st.number_input(label='Shimmer:APQ5')
         
     with col1:
-        APQ = st.number_input('MDVP:APQ')
+        APQ = st.number_input(label='MDVP:APQ')
         
     with col2:
-        DDA = st.number_input('Shimmer:DDA')
+        DDA = st.number_input(label='Shimmer:DDA')
         
     with col3:
-        NHR = st.number_input('NHR')
+        NHR = st.number_input(label='NHR')
         
     with col1:
-        HNR = st.number_input('HNR')
+        HNR = st.number_input(label='HNR')
         
     with col2:
-        RPDE = st.number_input('RPDE')
+        RPDE = st.number_input(label='RPDE')
         
     with col3:
-        DFA = st.number_input('DFA')
+        DFA = st.number_input(label='DFA')
         
     with col1:
-        spread1 = st.number_input('spread1')
+        spread1 = st.number_input(label='spread1')
         
     with col2:
-        spread2 = st.number_input('spread2')
+        spread2 = st.number_input(label='spread2')
         
     with col3:
-        D2 = st.number_input('D2')
+        D2 = st.number_input(label='D2')
         
     with col1:
-        PPE = st.number_input('PPE')
+        PPE = st.number_input(label='PPE')
         
     
     
