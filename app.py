@@ -28,73 +28,73 @@ if selected == "Parkinsons Disease Prediction" :
     #st.header("Welcome to The Parkinsons Disease Prediction System Page")
     st.markdown("<h1 style='color:#FF4B4B'>Welcome to Parkinsons Disease Prediction System</h1>",unsafe_allow_html=True)
     st.code('Here You can Check You Parkinsons Disease Status and Heart Disease as Well',language="C")
-    col1, col2, col3 = st.columns(3)  
+    col1, col2, col3 = st.columns(3) 
     
     with col1:
-        fo = st.number_input(label='MDVP:Fo(Hz)')
+        fo = st.number_input('MDVP:Fo(Hz)',min_value=0.0,step=1e-6,format="%0.5f")
         
     with col2:
-        fhi = st.number_input(label='MDVP:Fhi(Hz)')
+        fhi = st.number_input('MDVP:Fhi(Hz)',min_value=0.0,step=1e-6,format="%0.5f")
         
     with col3:
-        flo = st.number_input(label='MDVP:Flo(Hz)')
+        flo = st.number_input('MDVP:Flo(Hz)',min_value=0.0,step=1e-6,format="%0.5f")
         
     with col1:
-        Jitter_percent = st.number_input(label='MDVP:Jitter(%)')
+        Jitter_percent = st.number_input('MDVP:Jitter(%)',min_value=0.0,step=1e-6,format="%0.5f")
         
     with col2:
-        Jitter_Abs = st.number_input(label='MDVP:Jitter(Abs)')
+        Jitter_Abs = st.number_input('MDVP:Jitter(Abs)',min_value=0.0,step=1e-6,format="%0.5f")
         
     with col3:
-        RAP = st.number_input(label='MDVP:RAP')
+        RAP = st.number_input('MDVP:RAP',min_value=0.0,step=1e-6,format="%0.5f")
         
     with col1:
-        PPQ = st.number_input(label='MDVP:PPQ')
+        PPQ = st.number_input('MDVP:PPQ',min_value=0.0,step=1e-6,format="%0.5f")
         
     with col2:
-        DDP = st.number_input(label='Jitter:DDP')
+        DDP = st.number_input('Jitter:DDP',min_value=0.0,step=1e-6,format="%0.5f")
         
     with col3:
-        Shimmer = st.number_input(label='MDVP:Shimmer')
+        Shimmer = st.number_input('MDVP:Shimmer',min_value=0.0,step=1e-6,format="%0.5f")
         
     with col1:
-        Shimmer_dB = st.number_input(label='MDVP:Shimmer(dB)')
+        Shimmer_dB = st.number_input('MDVP:Shimmer(dB)',min_value=0.0,step=1e-6,format="%0.5f")
         
     with col2:
-        APQ3 = st.number_input(label='Shimmer:APQ3')
+        APQ3 = st.number_input('Shimmer:APQ3',min_value=0.0,step=1e-6,format="%0.5f")
         
     with col3:
-        APQ5 = st.number_input(label='Shimmer:APQ5')
+        APQ5 = st.number_input('Shimmer:APQ5',min_value=0.0,step=1e-6,format="%0.5f")
         
     with col1:
-        APQ = st.number_input(label='MDVP:APQ')
+        APQ = st.number_input('MDVP:APQ',min_value=0.0,step=1e-6,format="%0.5f")
         
     with col2:
-        DDA = st.number_input(label='Shimmer:DDA')
+        DDA = st.number_input('Shimmer:DDA',min_value=0.0,step=1e-6,format="%0.5f")
         
     with col3:
-        NHR = st.number_input(label='NHR')
+        NHR = st.number_input('NHR',min_value=0.0,step=1e-6,format="%0.5f")
         
     with col1:
-        HNR = st.number_input(label='HNR')
+        HNR = st.number_input('HNR',min_value=0.0,step=1e-6,format="%0.5f")
         
     with col2:
-        RPDE = st.number_input(label='RPDE')
+        RPDE = st.number_input('RPDE',min_value=0.0,step=1e-6,format="%0.5f")
         
     with col3:
-        DFA = st.number_input(label='DFA')
+        DFA = st.number_input('DFA',min_value=0.0,step=1e-6,format="%0.5f")
         
     with col1:
-        spread1 = st.number_input(label='spread1')
+        spread1 = st.number_input('spread1',min_value=0.0,step=1e-6,format="%0.5f")
         
     with col2:
-        spread2 = st.number_input(label='spread2')
+        spread2 = st.number_input('spread2',min_value=0.0,step=1e-6,format="%0.5f")
         
     with col3:
-        D2 = st.number_input(label='D2')
+        D2 = st.number_input('D2',min_value=0.0,step=1e-6,format="%0.5f")
         
     with col1:
-        PPE = st.number_input(label='PPE')
+        PPE = st.number_input('PPE',min_value=0.0,step=1e-6,format="%0.5f")
         
     
     
