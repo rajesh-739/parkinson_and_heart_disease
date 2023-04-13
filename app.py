@@ -4,14 +4,14 @@ Created on Mon Mar  6 00:02:06 2023
 
 @author: J Rajesh
 """
-
+import pandas as pd
 import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
 
 
-heart_model = pickle.load(open("D:\Project_Related Files\Heart Disease Prediction\heart_disease_model.sav",'rb'))
-parkinson_model = pickle.load(open("D:\Project_Related Files\Parkinson's Disease Data Set\parkinson_disease_model.sav",'rb'))
+heart_model = pickle.load(open("heart_disease_model.sav",'rb'))
+parkinson_model = pickle.load(open("parkinson_disease_model.sav",'rb'))
 
 
 
@@ -85,16 +85,16 @@ if selected == "Parkinsons Disease Prediction" :
         DFA = st.number_input('DFA',min_value=0.0,step=1e-6,format="%0.5f")
         
     with col1:
-        spread1 = st.number_input('spread1',min_value=0.0,step=1e-6,format="%0.5f")
+        spread1 = st.number_input('spread1',step=1e-6,format="%0.6f")
         
     with col2:
-        spread2 = st.number_input('spread2',min_value=0.0,step=1e-6,format="%0.5f")
+        spread2 = st.number_input('spread2',step=1e-6,format="%0.6f")
         
     with col3:
-        D2 = st.number_input('D2',min_value=0.0,step=1e-6,format="%0.5f")
+        D2 = st.number_input('D2',min_value=0.0,step=1e-6,format="%0.6f")
         
     with col1:
-        PPE = st.number_input('PPE',min_value=0.0,step=1e-6,format="%0.5f")
+        PPE = st.number_input('PPE',min_value=0.0,step=1e-6,format="%0.6f")
         
     
     
@@ -111,6 +111,13 @@ if selected == "Parkinsons Disease Prediction" :
           parkinsons_diagnosis = "The person does not have Parkinson's disease"
         
     st.success(parkinsons_diagnosis)
+    st.markdown("<h1></h1>",unsafe_allow_html=True)
+    
+    if st.button("View DataSet"):
+        parkinson_data = pd.read_csv("D:\Project_Related Files\Parkinson's Disease Data Set\parkinsons.csv")
+        st.dataframe(parkinson_data)
+        
+
 
 
     
@@ -208,3 +215,8 @@ if (selected == 'Heart Disease Prediction'):
           heart_diagnosis = 'The Person does not have any heart disease'
         
     st.info(heart_diagnosis)
+
+    st.markdown("<h1></h1>",unsafe_allow_html=True)
+    if st.button("View DataSet"):
+        heart_data = pd.read_csv("D:\Project_Related Files\Heart Disease Prediction\heart.csv")
+        st.dataframe(heart_data)
