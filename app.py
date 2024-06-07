@@ -101,21 +101,21 @@ if selected == "Parkinsons Disease Prediction" :
     # code for Prediction
     parkinsons_diagnosis = ''
     
-    # creating a button for Prediction    
+    # creating a button for Prediction 
+    result = False
     if st.button("Parkinson's Test Result"):
         parkinsons_prediction = parkinson_model.predict([[fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ,DDP,Shimmer,Shimmer_dB,APQ3,APQ5,APQ,DDA,NHR,HNR,RPDE,DFA,spread1,spread2,D2,PPE]])                          
         
         if (parkinsons_prediction[0] == 1):
           parkinsons_diagnosis = "The person has Parkinson's disease"
+          result = True
         else:
           parkinsons_diagnosis = "The person does not have Parkinson's disease"
         
     st.success(parkinsons_diagnosis)
+    if (result):
+        st.info("Check Your Heart Disease Status at the Side bar menu by Clicking on Heart Disease")
     st.markdown("<h1></h1>",unsafe_allow_html=True)
-    
-    if st.button("View DataSet"):
-        parkinson_data = pd.read_csv("D:\Project_Related Files\Parkinson's Disease Data Set\parkinsons.csv")
-        st.dataframe(parkinson_data)
         
 
 
